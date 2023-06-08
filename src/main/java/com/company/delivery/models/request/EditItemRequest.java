@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class AddItemRequest {
+public class EditItemRequest {
 
     private String itemName;
     private String description;

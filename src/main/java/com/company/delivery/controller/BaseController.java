@@ -20,6 +20,16 @@ public abstract class BaseController {
         .build();
   }
 
+  public static BaseResponse<?> createSuccessResponse(){
+    return BaseResponse.builder()
+        .code(GlobalMessage.SUCCESS.code)
+        .message(GlobalMessage.SUCCESS.message)
+        .data("")
+        .errors(new ArrayList<>())
+        .serverTime(Datetimes.toStringAllDatetime(new Date()))
+        .build();
+  }
+
   public static BaseResponse<?> createResponse(GlobalMessage message, List<String> err, Object data){
     return BaseResponse.builder()
         .code(message.code)

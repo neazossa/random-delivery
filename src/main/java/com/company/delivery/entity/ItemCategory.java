@@ -2,6 +2,7 @@ package com.company.delivery.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import java.util.UUID;
 
@@ -9,15 +10,15 @@ import java.util.UUID;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
+@SuperBuilder
 @Entity
 @Table(name = "item_category")
 public class ItemCategory extends BaseEntity {
 
   @Id
   @GeneratedValue(strategy = GenerationType.UUID)
-  @Column(name = "id", nullable = false)
-  private UUID itemTypeId;
+  @Column(name = "typeId", nullable = false)
+  private String itemTypeId;
 
   @Column(name = "nameType")
   private String nameType;
@@ -36,5 +37,7 @@ public class ItemCategory extends BaseEntity {
 
   @Column(name = "isDelete")
   private boolean isDelete;
+
+
 
 }
