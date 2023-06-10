@@ -1,4 +1,4 @@
-package com.company.delivery.controller.warehouse;
+package com.company.delivery.controller;
 
 import com.company.delivery.controller.BaseController;
 import com.company.delivery.models.ApiPath;

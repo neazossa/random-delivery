@@ -20,8 +20,6 @@ public class PackagingItemDetail extends BaseEntity{
   @JoinColumn(name = "typeId")
   private ItemCategory itemId;
 
-  private Long amount;
-
   private boolean isDefect;
 
   @ManyToOne

@@ -1,6 +1,5 @@
 package com.company.delivery.services.impl;
 
-import com.company.delivery.entity.ItemCategory;
 import com.company.delivery.entity.Merchant;
 import com.company.delivery.exception.BusinessException;
 import com.company.delivery.models.constant.GlobalMessage;
