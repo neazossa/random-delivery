@@ -4,6 +4,7 @@ import com.company.delivery.entity.Warehouse;
 import com.company.delivery.models.constant.Operation;
 import com.company.delivery.models.request.AddWarehouseRequest;
 import com.company.delivery.models.request.EditWarehouseRequest;
+import com.company.delivery.models.response.WarehouseResponses;
 import com.company.delivery.repository.WarehouseRepository;
 import com.company.delivery.services.WarehouseService;
 import lombok.extern.slf4j.Slf4j;
@@ -29,6 +30,11 @@ public class WarehouseServiceImpl implements WarehouseService {
 
   @Override
   public Operation deleteWarehouse(String warehouseId) {
+    return null;
+  }
+
+  @Override
+  public WarehouseResponses getDetailWarehouse(String warehouseId) {
     return null;
   }
 

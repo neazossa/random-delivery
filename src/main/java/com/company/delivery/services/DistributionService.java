@@ -6,4 +6,6 @@ public interface DistributionService {
 
   Object addDistribution(AddDistributionRequest request);
 
+  Object receiveDistribution(String request);
+
 }

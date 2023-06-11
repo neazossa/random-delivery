@@ -22,4 +22,9 @@ public class DistributionServiceImpl implements DistributionService {
   public Object addDistribution(AddDistributionRequest request) {
     return null;
   }
+
+  @Override
+  public Object receiveDistribution(String request) {
+    return null;
+  }
 }

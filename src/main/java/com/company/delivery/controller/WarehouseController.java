@@ -4,6 +4,7 @@ import com.company.delivery.models.ApiPath;
 import com.company.delivery.models.BaseResponse;
 import com.company.delivery.models.request.AddWarehouseRequest;
 import com.company.delivery.models.request.EditWarehouseRequest;
+import com.company.delivery.models.request.ReceiveWarehouseRequest;
 import com.company.delivery.services.WarehouseService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,10 +31,9 @@ public class WarehouseController extends BaseController {
     return createSuccessResponse(warehouseService.editWarehouse(warehouseId, request));
   }
 
-  @DeleteMapping(value = "/{warehouseId}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-  public BaseResponse<?> deleteWarehouse(@PathVariable("warehouseId") String warehouseId) {
-    log.info("/warehouse start WarehouseController.deleteWarehouse()");
-    return createSuccessResponse(warehouseService.deleteWarehouse(warehouseId));
+  @GetMapping(value = "/{warehouseId}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+  public BaseResponse<?> getWarehouseDetail(@PathVariable("warehouseId") String warehouseId) {
+    log.info("/warehouse start WarehouseController.getWarehouseDetail()");
+    return createSuccessResponse(warehouseService.getDetailWarehouse(warehouseId));
   }
-
 }

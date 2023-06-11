@@ -6,6 +6,7 @@ public class ApiPath {
   private static final String VERSION = "/v1";
 
   public static final String ADD = "/add";
+  public static final String RECEIVE = "/receive";
 
   //Warehouse
   public static final String ITEM = BASEPATH + VERSION + "/item";

@@ -7,4 +7,5 @@ public interface DeliveryService {
 
   DeliveryResponse addDelivery(AddDeliveryRequest request);
 
+  Object receiveDelivery(String transactionId);
 }

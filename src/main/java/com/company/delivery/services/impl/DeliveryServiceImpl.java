@@ -24,4 +24,9 @@ public class DeliveryServiceImpl implements DeliveryService {
     return null;
   }
 
+  @Override
+  public Object receiveDelivery(String transactionId) {
+    return null;
+  }
+
 }

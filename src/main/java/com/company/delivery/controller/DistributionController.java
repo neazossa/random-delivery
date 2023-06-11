@@ -7,10 +7,7 @@ import com.company.delivery.services.DistributionService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @Slf4j
@@ -21,9 +18,15 @@ public class DistributionController extends BaseController {
   private DistributionService distributionService;
 
   @PostMapping(value = ApiPath.ADD, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-  public BaseResponse<?> addDelivery(@RequestBody AddDistributionRequest request) {
+  public BaseResponse<?> addDistribution(@RequestBody AddDistributionRequest request) {
     log.info("/distribution/add start DistributionController.addDistribution()");
     return createSuccessResponse(distributionService.addDistribution(request));
+  }
+
+  @PostMapping(value = ApiPath.RECEIVE + "/{transactionId}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+  public BaseResponse<?> receiveDistribution(@PathVariable("transactionId") String request) {
+    log.info("/distribution/add start DistributionController.receiveDistribution()");
+    return createSuccessResponse(distributionService.receiveDistribution(request));
   }
 
 }
